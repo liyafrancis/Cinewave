@@ -4,10 +4,6 @@ import HeroSection from './Hero';
 import './home.css';
 function HomePage() {
   return (
-
-
-
-    
     <div className="w-full h-full bg-black homepage-container">
       <Navbar />
       <HeroSection />
