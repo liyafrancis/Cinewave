@@ -4,9 +4,10 @@ import { FaUser,FaLock } from "react-icons/fa";
 import './loginform.css'
 const loginform = () => {
   return (
+    <div className='body1'>
     <div className="wrapper">
         <form action=''>
-            <h1>LOGIN</h1>
+            <h1>Login</h1>
             <div className="input-box">
                 <input type='text' placeholder='username' required/>
                 <FaUser className='icon'/>
@@ -27,6 +28,7 @@ const loginform = () => {
         <div >
                 <p>Click for Home Page <Link to = '/homepage'> Click </Link></p>
             </div>
+    </div>
     </div>
  
     

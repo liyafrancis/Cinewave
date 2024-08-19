@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav className="w-full bg-black text-white px-4 py-4 flex justify-between items-center">
@@ -10,7 +11,7 @@ const Navbar = () => {
         <li><a href="#" className="hover:text-gray-300">Home</a></li>
         <li><a href="#" className="hover:text-gray-300">Movies</a></li>
         <li><a href="#" className="hover:text-gray-300">Theatres</a></li>
-        <li><a href="#" className="hover:text-gray-300">Reservations</a></li>
+        <li><Link to="/reservation" className="hover:text-gray-300">Reservations</Link></li>
         <li><a href="#" className="hover:text-gray-300">Contact Us</a></li>
       </ul>
       <div className="md:hidden">
