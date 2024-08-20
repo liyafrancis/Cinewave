@@ -23,7 +23,7 @@ const Loginform = () => {
 
         // Check if the user is an admin and redirect accordingly
         if (data.role === 'admin') {
-          navigate('/admin-dashboard'); // Redirect to admin dashboard if the user is an admin
+          navigate('/intro'); // Redirect to admin dashboard if the user is an admin
         } else {
           navigate('/homepage'); // Redirect to homepage for regular users
         }

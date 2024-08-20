@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/cinewave', {
+mongoose.connect('mongodb://127.0.0.1:27017/cinewave', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -25,6 +25,8 @@ app.use('/api/movies', movieRoutes);
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
 
+const theatreRoutes = require('./routes/theatre');
+app.use('/api/theatre',theatreRoutes);
 
 // Start the server
 app.listen(PORT, () => {

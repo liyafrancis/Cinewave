@@ -76,7 +76,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="admin-dashboard">
-      <h1>Admin Dashboard</h1>
+      
       
       {/* Movie List */}
       <div className="movie-list">

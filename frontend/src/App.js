@@ -4,7 +4,9 @@ import Reservation from './Components/Reservation/reservation';
 import SignUp from './Components/SignUp/signup'
 import HomePage from './Components/Homepage/HomePage';
 import Admin from './Components/Dashboard/Admin';
+import Intro from './Components/Intro/intro';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Theatre from './Components/Theatre/theatre';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/reservation" element={<Reservation/>}/>
         <Route path="/admin-dashboard" element={<Admin/>}/>
+        <Route path='/intro' element={<Intro/>}/>
+        <Route path='/theatre' element={<Theatre/>}/>
       </Routes>
     </Router>
     </div>
