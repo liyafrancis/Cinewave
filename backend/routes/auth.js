@@ -3,12 +3,13 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 const Admin = require('../models/Admin');
-const jwt = require('jsonwebtoken');
 
+const { login } = require('../controllers/authController');
 // Register a new user
 router.post('/register', async (req, res) => {
+  console.log('Register endpoint hit');
   const { username, password,email,role } = req.body;
-  
+  console.log(`Received data: ${username}, ${email}, ${role}`);
   if (role === 'admin') {
     try {
       const admin = new Admin({ username, password, email });
@@ -30,20 +31,8 @@ router.post('/register', async (req, res) => {
 });
 
 // Login and get token
-router.post('/login', async (req, res) => {
-  const { username, password } = req.body;
-  try {
-    const user = await User.findOne({ username });
-    if (!user || !(await user.comparePassword(password))) {
-      return res.status(401).json({ message: 'Invalid credentials' });
-    }
-    const token = jwt.sign({ id: user._id }, 'your_jwt_secret', {
-      expiresIn: '1h',
-    });
-    res.json({ token });
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+router.post('/login', login);
+
+
 
 module.exports = router;

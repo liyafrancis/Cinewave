@@ -20,6 +20,7 @@ router.post('/', authenticateToken, authorizeRole('admin'), async (req, res) => 
     title: req.body.title,
     genres: req.body.genres,
     imgSrc: req.body.imgSrc,
+    description: req.body.description,
   });
 
   try {

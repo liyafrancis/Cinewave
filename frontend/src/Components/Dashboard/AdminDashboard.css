@@ -1,0 +1,68 @@
+.admin-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .movie-list {
+    margin-bottom: 50px;
+  }
+  
+  .movie-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .movie-item img {
+    width: 100px;
+    height: 150px;
+    margin-right: 20px;
+  }
+  
+  .movie-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .movie-item p {
+    margin: 5px 0;
+  }
+  
+  .movie-item button {
+    margin-right: 10px;
+  }
+  
+  .movie-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .movie-form input,
+  .movie-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .movie-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .movie-form button:hover {
+    background-color: #0056b3;
+  }
+  
