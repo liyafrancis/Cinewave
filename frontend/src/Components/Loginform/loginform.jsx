@@ -67,9 +67,7 @@ const Loginform = () => {
             <p>Don't have an account? <Link to='/sign'>Sign Up</Link></p>
           </div>
         </form>
-        <div>
-          <p>Click for Home Page <Link to='/homepage'>Click</Link></p>
-        </div>
+
       </div>
     </div>
   );
