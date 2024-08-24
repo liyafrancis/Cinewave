@@ -1,0 +1,26 @@
+.seat-layout {
+    padding: 20px;
+  }
+  
+  .seating-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .seat-row {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .seat {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    cursor: pointer;
+  }
+  

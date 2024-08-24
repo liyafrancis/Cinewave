@@ -10,7 +10,7 @@ const Navbar = () => {
       <ul className="hidden md:flex space-x-8">
         <li><a href="#" className="hover:text-gray-300">Home</a></li>
         <li><a href="#" className="hover:text-gray-300">Movies</a></li>
-        <li><a href="#" className="hover:text-gray-300">Theatres</a></li>
+        <li><Link to="/seatlayout" className="hover:text-gray-300">Theatres</Link></li>
         <li><Link to="/reservation" className="hover:text-gray-300">Reservations</Link></li>
         <li><a href="#" className="hover:text-gray-300">Contact Us</a></li>
       </ul>

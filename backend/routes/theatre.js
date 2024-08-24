@@ -1,4 +1,3 @@
-// routes/movies.js
 const express = require('express');
 const router = express.Router();
 const Theatre = require('../models/Theatre');
@@ -7,7 +6,20 @@ const { authenticateToken, authorizeRole } = require('../middleware/authMiddlewa
 // Get all theatres
 router.get('/', authenticateToken, async (req, res) => {
   try {
-    const theatre = await Theatre.find();
+    const theatres = await Theatre.find();
+    res.json(theatres);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Get a specific theatre by name
+router.get('/name/:name', authenticateToken, async (req, res) => {
+  try {
+    const theatre = await Theatre.findOne({ name: req.params.name });
+    if (!theatre) {
+      return res.status(404).json({ message: 'Theatre not found' });
+    }
     res.json(theatre);
   } catch (err) {
     res.status(500).json({ message: err.message });

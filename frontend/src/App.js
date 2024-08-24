@@ -7,6 +7,7 @@ import Admin from './Components/Dashboard/Admin';
 import Intro from './Components/Intro/intro';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Theatre from './Components/Theatre/theatre';
+import SeatLayout from './Components/SeatLayout/SeatLayout';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/admin-dashboard" element={<Admin/>}/>
         <Route path='/intro' element={<Intro/>}/>
         <Route path='/theatre' element={<Theatre/>}/>
+        <Route path='/seatlayout' element={<SeatLayout/>}/>
       </Routes>
     </Router>
     </div>
